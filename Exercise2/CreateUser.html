@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <style>
+        .title {
+            text-align: center;
+        }
+        
+        form {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./CreateUser.php" method="POST">
+        <div class="title">
+            <h1>Registe An User</h1>
+        </div><br>
+        <div class="UserID">
+            <p>Input your user name: </p>
+            <input type="text" id="username">
+        </div><br>
+        <div class="submit">
+            <button id="submit" onclick="submit()">Submit</button>
+        </div>
+    </form>
+</body>
+<script>
+    var user = document.getElementById("username");
+
+    function submit() {
+        if (username.value == "") {
+            alert("Please input username!");
+            return false;
+        }
+    }
+</script>
+
+</html>

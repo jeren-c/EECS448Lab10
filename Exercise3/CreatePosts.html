@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Posts</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        textarea {
+            padding: 10px;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./CreatePosts.php">
+        <div class="title">
+            <h1>Registe A Post</h1>
+        </div><br>
+        <div class="targetUser">
+            <p>Create post for which user: </p><br>
+            <input type="text" id="targetUser">
+        </div>
+        <div class="post">
+            <p>write post here: </p>
+            <textarea name="post" id="post" cols="15" rows="5"></textarea>
+        </div>
+        <button onclick="submit()" id="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    var user = document.getElementById("targetUser");
+    var post = document.getElementById("post");
+
+    function submit() {
+        if (user.value == "") {
+            alert("Please input the target username!");
+            return false;
+        } else if (post.value == "") {
+            alert("Please write something on report!");
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+
+</html>
